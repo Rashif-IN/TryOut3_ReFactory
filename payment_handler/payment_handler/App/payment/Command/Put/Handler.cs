@@ -1,6 +1,8 @@
 ﻿
+using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Hangfire;
 using MediatR;
 
 namespace payment_handler.App.payment.Command.Put
@@ -26,8 +28,11 @@ namespace payment_handler.App.payment.Command.Put
 
             if(paymentdata.transaction_status == "paid")
             {
-                BackgroundJob.Enqueue(() => Console.WriteLine("Someone's requesting and getting a data"));
-
+                BackgroundJob.Enqueue(() => Console.WriteLine("payment paid"));
+            }
+            else
+            {
+                BackgroundJob.Enqueue(() => Console.WriteLine("payment not paid"));
             }
 
             await konteks.SaveChangesAsync(cancellationToken);

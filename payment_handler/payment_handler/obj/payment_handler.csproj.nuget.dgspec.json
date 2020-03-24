@@ -14,7 +14,7 @@
         "outputPath": "/Users/user/Projects/Tryout3/payment_handler/payment_handler/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/user/.config/NuGet/NuGet.Config"
+          "/Users/user/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -37,6 +37,22 @@
         "netcoreapp3.1": {
           "dependencies": {
             "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.6.4.1, )"
+            },
+            "Hangfire.SqlServer": {
               "target": "Package",
               "version": "[1.7.9, )"
             },

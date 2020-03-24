@@ -18,21 +18,21 @@ namespace payment_handler
 
         public DbSet<order_detailsModel> Order_Details { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder
-                .Entity<paymentModel>()
-                .HasOne(X => X.OrderModel)
-                .WithMany()
-                .HasForeignKey(X => X.order_id);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder
+        //        .Entity<paymentModel>()
+        //        .HasOne(X => X.OrderModel)
+        //        .WithMany()
+        //        .HasForeignKey(X => X.order_id);
 
-            modelBuilder
-                .Entity<orderModel>()
-                .HasOne(X => X.user_Model)
-                .WithMany()
-                .HasForeignKey(X => X.user_id);
+        //    modelBuilder
+        //        .Entity<orderModel>()
+        //        .HasOne(X => X.user_Model)
+        //        .WithMany()
+        //        .HasForeignKey(X => X.user_id);
 
 
-        }
+        //}
     }
 }

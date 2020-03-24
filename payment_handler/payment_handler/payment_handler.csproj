@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>7e598180-9a8f-4be7-b179-a40dc586ee37</UserSecretsId>
   </PropertyGroup>
 
 
@@ -25,5 +27,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Hangfire" Version="1.7.9" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.9" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.9" />
+    <PackageReference Include="Hangfire.PostgreSql" Version="1.6.4.1" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="payment_handler.csproj" />
   </ItemGroup>
 </Project>

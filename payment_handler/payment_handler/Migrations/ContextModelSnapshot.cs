@@ -36,8 +36,6 @@ namespace payment_handler.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("user_id");
-
                     b.ToTable("orders");
                 });
 
@@ -107,8 +105,6 @@ namespace payment_handler.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("order_id");
-
                     b.ToTable("payments");
                 });
 
@@ -161,24 +157,6 @@ namespace payment_handler.Migrations
                     b.HasKey("id");
 
                     b.ToTable("user");
-                });
-
-            modelBuilder.Entity("payment_handler.Models.orderModel", b =>
-                {
-                    b.HasOne("payment_handler.Models.user_model", "user_Model")
-                        .WithMany()
-                        .HasForeignKey("user_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("payment_handler.Models.paymentModel", b =>
-                {
-                    b.HasOne("payment_handler.Models.orderModel", "OrderModel")
-                        .WithMany()
-                        .HasForeignKey("order_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -13,7 +13,7 @@ namespace payment_handler.Models
         public string transaction_status { get; set; } = "pending";
         public double created_at { get; set; } = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0, 0).ToLocalTime()).TotalSeconds;
         public double updated_at { get; set; } = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0, 0).ToLocalTime()).TotalSeconds;
-        public orderModel OrderModel { get; set; }
-        
+        //public orderModel OrderModel { get; set; }
+
     }
 }

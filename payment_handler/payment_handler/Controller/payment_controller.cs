@@ -18,7 +18,7 @@ namespace payment_handler.Controller
         [HttpGet]
         public async Task<ActionResult<App.payment.Query.GetAll.Dto>> Get()
         {
-            var result = new App.User.Query.GetAll.Command();
+            var result = new App.payment.Query.GetAll.Command();
             return Ok(await meciater.Send(result));
         }
 

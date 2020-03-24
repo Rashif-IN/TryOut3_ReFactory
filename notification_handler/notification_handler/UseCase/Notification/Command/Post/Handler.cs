@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading;
 using System.Threading.Tasks;
+using Hangfire;
 using MediatR;
 using notification_handler.Model;
 
@@ -36,7 +37,7 @@ namespace notification_handler.UseCase.Notification.Command.Post
 
             var Notif = konteks.notif.First(x => x.title == request.data.Attributes.Title);
 
-            foreach (var x in request.data.Attributes.Target) //overhere
+            foreach (var x in request.data.Attributes.Target) 
             {
                 konteks.Add(new notif_logs_model
                 {
@@ -46,7 +47,16 @@ namespace notification_handler.UseCase.Notification.Command.Post
                     target = x.Id,
                     email_destination = x.Email_destination
                 });
-                sendmail("rydrydx@ujygu.io", x.Email_destination, request.data.Attributes.Title, request.data.Attributes.Message);
+                if(x.Email_destination != "" )
+                {
+                    sendmail("rydrydx@ujygu.io", x.Email_destination, request.data.Attributes.Title, request.data.Attributes.Message);
+                    BackgroundJob.Enqueue(() => Console.WriteLine("email sent"));
+                }
+                else
+                {
+                    BackgroundJob.Enqueue(() => Console.WriteLine("no email destination"));
+                }
+                
             }
 
             konteks.SaveChanges();

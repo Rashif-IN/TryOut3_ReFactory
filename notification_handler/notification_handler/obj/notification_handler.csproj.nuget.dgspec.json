@@ -36,6 +36,26 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.6.4.1, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[8.0.1, )"

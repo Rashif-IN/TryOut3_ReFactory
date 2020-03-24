@@ -63,7 +63,7 @@ namespace payment_handler.App.payment.Command.Post
                 var properties = channel.CreateBasicProperties();
                 properties.Persistent = true;
                 channel.BasicPublish(exchange: "", routingKey: "userData", basicProperties: null, body: Body);
-                Console.WriteLine("User data has been forwarded");
+                Console.WriteLine("user data has been forwarded");
                 Console.ReadLine();
             }
             Console.ReadLine();
@@ -74,12 +74,12 @@ namespace payment_handler.App.payment.Command.Post
                 Credentials = new NetworkCredential("ccdced0fc36ee1", "215162738c26d0"),
                 EnableSsl = true
             };
-            _client.Send("emailfrom@aaa.com", "emailTo@aaaa.com", "payment title", "data has been sent to rabbitmq");
+            _client.Send("emailfrom@aaa.com", "emailTo@aaaa.com", "title: payment data", "msg: data has been sent to rabbitmq");
             Console.WriteLine("Sent");
 
             return new Dto
             {
-                message = "user posted",
+                message = "payment posted",
                 success = true
             };
         }

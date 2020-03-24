@@ -65,7 +65,7 @@ namespace notification_handler.UseCase.Notification.Query.GetAll
                     var message = Encoding.UTF8.GetString(body);
                     var content = new StringContent(message, Encoding.UTF8, "application/json");
                     Console.WriteLine($"Processing data from queue");
-                    await _client.PostAsync("http://localhost:2000/notification", content);
+                    await _client.PostAsync("http://localhost:2900/notification", content);
 
                 };
                 _channel.BasicConsume( queue: "userData", autoAck: true, consumer: consumer);

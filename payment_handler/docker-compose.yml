@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  payment_handler:
+    image: ${DOCKER_REGISTRY-}paymenthandler
+    build:
+      context: .
+      dockerfile: payment_handler/Dockerfile
+
+  notification_handler:
+    image: ${DOCKER_REGISTRY-}notificationhandler
+    build:
+      context: .
+      dockerfile: ../notification_handler/notification_handler/Dockerfile
+
