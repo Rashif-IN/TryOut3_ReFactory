@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{E5677E6D-CC10-4B44-8721-5DCB70EA85D2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="notification_handler/UseCase/Notification/Command/Post/Handler.cs">
+    <Files>
+      <File FileName="notification_handler/Startup.cs" Line="58" Column="1" />
+      <File FileName="notification_handler/Context.cs" Line="1" Column="1" />
+      <File FileName="notification_handler/Controllers/notif_controller.cs" Line="46" Column="54" />
+      <File FileName="notification_handler/appsettings.json" Line="20" Column="2" />
+      <File FileName="notification_handler/Properties/launchSettings.json" Line="30" Column="2" />
+      <File FileName="notification_handler/UseCase/Notification/Query/GetAll/Handler.cs" Line="11" Column="7" />
+      <File FileName="notification_handler/UseCase/Notification/Command/Post/Handler.cs" Line="70" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="notification_handler" expanded="True">
+            <Node name="notification_handler" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="UseCase" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.notification__handler PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
