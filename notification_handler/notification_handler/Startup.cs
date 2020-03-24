@@ -35,7 +35,7 @@ namespace notification_handler
             services.AddDbContext<Context>(option => option.UseNpgsql(Configuration.GetConnectionString("postgre")));
             services.AddMediatR(typeof(Handler).GetTypeInfo().Assembly);
 
-            services.AddHangfire(config => config.UsePostgreSqlStorage("Host=localhost;Database=payments;Username=postgres;Password=docker;"));
+            services.AddHangfire(config => config.UsePostgreSqlStorage("Host=pg-docker;Database=payments;Username=postgres;Password=docker;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
